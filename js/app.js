@@ -56,15 +56,17 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-  let sumOf = sum(a,b)[0] + c;
-  let productOf = multiply(a,b)[0] * c;
-  return [sumOf,productOf,`${a} and ${b} and ${c} sum to ${sumOf}.`,`The product of ${a} and ${b} and ${c} is ${productOf}.`];
+  let sum1 = sum(a,b)[0];
+  let totalSum = sum(sum1,c)[0];
+  let product1 = multiply(a,b)[0];
+  let totalProduct = multiply(product1,c)[0];
+  return [totalSum,totalProduct,`${a} and ${b} and ${c} sum to ${totalSum}.`,`The product of ${a} and ${b} and ${c} is ${totalProduct}.`];
 }
 // let returnedArray3 = sumAndMultiply(4, 7, 5);
 // console.log(returnedArray3);
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-//testSumAndMultiply(4,7,5);// It passed
+//testSumAndMultiply(4,7,5);// It passed, I actually had to redo this to remove the + and * operators
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -82,7 +84,7 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
-
+  
 }
 
 // Here is the test for sumArray(); uncomment it to run it
