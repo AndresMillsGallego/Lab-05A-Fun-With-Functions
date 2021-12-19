@@ -142,10 +142,18 @@ Test this function by hand in the console to get it working, and when you think 
 let testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) { //eslint-disable-line
-
+  let product = multiply(dynamicArray[0],dynamicArray[1])[0];
+  let removed = dynamicArray.splice(0,2);
+  for (let i =0; i < dynamicArray.length; i++) {
+    product = multiply(product,dynamicArray[i])[0];
+  }
+  dynamicArray.unshift(removed);
+  return [product,`The numbers ${dynamicArray} have a product of ${product}.`];
 }
-
+let returnedArray6 = multiplyAnyArray(testDynamicArray);
+console.log(returnedArray6);
+//console.log(multiplyAnyArray(testDynamicArray));
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyAnyArray(testDynamicArray);
+//testMultiplyAnyArray(testDynamicArray);//This worked but I think the arrays got messed up with splice.  I still don't understand why the test failed as the output is exactly what was expected.
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
