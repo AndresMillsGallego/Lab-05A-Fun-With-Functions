@@ -62,8 +62,8 @@ function sumAndMultiply(a, b, c) { //eslint-disable-line
   let totalProduct = multiply(product1,c)[0];
   return [totalSum,totalProduct,`${a} and ${b} and ${c} sum to ${totalSum}.`,`The product of ${a} and ${b} and ${c} is ${totalProduct}.`];
 }
-// let returnedArray3 = sumAndMultiply(4, 7, 5);
-// console.log(returnedArray3);
+let returnedArray3 = sumAndMultiply(4, 7, 5);
+console.log(returnedArray3);
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
 //testSumAndMultiply(4,7,5);// It passed, I actually had to redo this to remove the + and * operators
@@ -84,15 +84,12 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
-problem-3
-  
-=======
   let [a,b,c] = [sumArr[0],sumArr[1],sumArr[2]];
   let arraySum1 = sum(a,b)[0];
   let totalArraySum = sum(arraySum1,c)[0];
   return [totalArraySum,`${a},${b},${c} was passed in as an array of numbers, and ${totalArraySum} is their sum.`];
-main
 }
+
 // let returnedArray4 = sumArray(testArray);
 // console.log(returnedArray4);
 
@@ -151,7 +148,7 @@ function multiplyAnyArray(dynamicArray) { //eslint-disable-line
   let lastNum = dynamicArray.slice(-1);
   let newArrayLength = dynamicArray.length - 1;
   let product = multiply(1,lastNum)[0];
-  console.log(dynamicArray);
+  //console.log(dynamicArray);
   for (let i = 0; i < newArrayLength; i++) {
     product = multiply(product,dynamicArray[i])[0];
   } return [product,`The numbers ${dynamicArray} have a product of ${product}.`];
